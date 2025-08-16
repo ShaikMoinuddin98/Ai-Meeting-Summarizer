@@ -50,14 +50,14 @@ export default function FileUpload({ onTranscriptChange, transcript }) {
         <Upload size={40} className="text-muted mb-3" />
         <p className="h5 mb-2">Drag & drop your transcript file here</p>
         <p className="text-muted small mb-3">
-          Supports .txt, .md, .doc, .docx files
+          Supports .txt files
         </p>
         <label className="btn btn-primary">
           Choose File
           <input
             type="file"
             className="d-none"
-            accept=".txt,.md,.doc,.docx"
+            accept=".txt"
             onChange={(e) => handleFileUpload(e.target.files[0])}
           />
         </label>

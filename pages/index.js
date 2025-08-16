@@ -4,8 +4,6 @@ import FileUpload from "../components/FileUpload";
 import SummaryEditor from "../components/SummaryEditor";
 import EmailForm from "../components/EmailForm";
 import {
-  AlertCircle,
-  CheckCircle,
   Loader2,
   FileText,
   Brain,
@@ -22,7 +20,6 @@ export default function Home() {
   const [summary, setSummary] = useState("");
   const [isGenerating, setIsGenerating] = useState(false);
   const [isSending, setIsSending] = useState(false);
-  const [notification, setNotification] = useState({ type: "", message: "" });
   const [summaryHistory, setSummaryHistory] = useState([]);
 
   useEffect(() => {
@@ -38,9 +35,6 @@ export default function Home() {
 
   const showNotification = (type, message) => {
     alert(message)
-    // setNotification({ type, message });
-    // console.log(notification)
-    // setTimeout(() => setNotification({ type: "", message: "" }), 5000);
   };
 
   const generateSummary = async () => {
@@ -158,25 +152,6 @@ export default function Home() {
               share them instantly via email
             </p>
           </div>
-
-          {/* Notification */}
-          {notification.message && (
-            <div
-              className={`alert ${
-                notification.type === "success"
-                  ? "alert-success"
-                  : "alert-danger"
-              }`}
-              role="alert"
-            >
-              {notification.type === "success" ? (
-                <CheckCircle className="me-2" size={18} />
-              ) : (
-                <AlertCircle className="me-2" size={18} />
-              )}
-              {notification.message}
-            </div>
-          )}
 
           <div className="row g-4">
             {/* Main Content */}
