@@ -10,7 +10,7 @@ Deployed Link : https://ai-meeting-summarizer-puce.vercel.app/
 
 ## 🚀 Features
 
-* 📂 **Upload or Paste Transcripts** – Supports `.txt`, `.md`, `.doc`, `.docx`.
+* 📂 **Upload or Paste Transcripts** – Supports `.txt`.
 * 🤖 **AI-Powered Summaries** – Uses Groq’s LLaMA model to generate concise, structured notes.
 * 🛠 **Custom Instructions** – Choose templates (Executive Summary, Action Items, etc.) or add your own.
 * ✍️ **Edit & Format** – Copy, download, or auto-format summaries before sending.
